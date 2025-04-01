@@ -355,7 +355,7 @@ export default function Home() {
   )
 }
 
-const TokenCard = ({ token, dark, className = '', ...props }: { 
+const TokenCard = ({ token, className = '', ...props }: { 
   token: TokenInfo, 
   dark: boolean,
   className?: string
