@@ -56,8 +56,8 @@ export default function Home() {
 
       const results = await Promise.allSettled(
         validTokens.map(token => 
-          fetch(`/api/research?token=${token.toLowerCase()}`)
-            .then(res => {
+          fetch(`https://crypto-research-agent-api-yvc3.onrender.com/research?token=${token.toLowerCase()}`)
+          .then(res => {
               if (!res.ok) throw new Error('API request failed')
               return res.json()
             })
