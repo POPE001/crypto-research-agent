@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Token is required' }, { status: 400 })
   }
 
-  const res = await fetch(`https://crypto-research-agent-api-yvc3.onrender.com?token=${token}`)
+  const res = await fetch(`https://crypto-research-agent-api-yvc3.onrender.com/research?token=${token}`)
   const data = await res.json()
   console.log("✅ Token data received in frontend:", data)
 
